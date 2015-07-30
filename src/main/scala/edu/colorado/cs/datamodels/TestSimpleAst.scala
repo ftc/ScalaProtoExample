@@ -14,6 +14,7 @@ object TestSimpleAst {
   def main(args: Array[String]): Unit = {
     val someAst = s_to_proto(AddS(IntConstS(7), SubS(IntConstS(3), IntConstS(2))))
     val bytes = someAst.toByteArray
+    println("size is: " + bytes.length)
     val deserializedAst = proto_to_s(Expr.parseFrom(bytes))
     println(deserializedAst)
   }
@@ -43,6 +44,5 @@ object TestSimpleAst {
   def constructSub(left: Expr, right: Expr): Expr = {
     Expr(Kind.Sub(Sub(Some(left),Some(right))))
   }
-
-
+  
 }
