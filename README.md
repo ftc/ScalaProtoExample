@@ -4,5 +4,7 @@ This is a simple project I threw together to see how hard it is to serialize an 
 Conclusion: Fair amount of boiler plate but it seems like it could be worth it.
 
 Installation:
-install protoc 2.6 this can be done through brew 
-'sbt run'
+
+*install protoc 2.6 this can be done through brew 
+
+*'sbt run'
