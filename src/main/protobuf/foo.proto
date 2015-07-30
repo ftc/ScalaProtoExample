@@ -1,8 +1,23 @@
-message AMessage
+message Expr
 {
   oneof kind
   {
-    int32 a=1;
-    string b=2;
+    Add add = 1;
+    IntConst int_const = 2;
+    Sub sub = 3;
   }
+}
+
+message IntConst {
+  optional int32 a = 1;
+}
+
+message Add {
+	optional Expr left = 1;
+	optional Expr right = 2;
+}
+
+message Sub {
+	optional Expr left = 1;
+	optional Expr right = 2;
 }
